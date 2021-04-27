@@ -207,7 +207,9 @@ function validateStudent(student) {
 
 
 
+const host = '0.0.0.0';
 const port = process.env.PORT || 3000
 
-app.listen(port /*PortNumber*/, () => console.log(`Listeneing on port ${port}......`) /* optionally a function that called when the app starts listening to the given port */);
-
+app.listen(port, host, function() {
+    console.log("Server started.......");
+  });
